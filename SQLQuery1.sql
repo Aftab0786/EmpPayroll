@@ -65,3 +65,13 @@ basicPay float,
 deduction float,
 taxablePay float,
 incomeTax float;
+
+---UC10 Ability To Make Terissa of sales and marketing department----
+
+insert into employee_payroll values
+('Terisa',700000.0,'2020-08-14','F','8734586245','sales','india',100.0,12000.0,2000.0,1233.0)
+
+insert into employee_payroll values
+('Terisa',500000.0,'2020-08-14','F','8723586245','Marketing','india',100.0,12000.0,2000.0,1233.0)
+
+select * from employee_payroll where name='Terisa';
