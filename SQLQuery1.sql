@@ -38,3 +38,14 @@ select sum(Salary) as TotalSalary,Gender from employee_payroll group by Gender;
 select * from employee_payroll;
 select Avg(salary) as NumbOfEmployees,Gender from employee_payroll group by Gender;
 
+----UC7 Ability to find sum, average, min, max no of male and female---
+
+
+select sum(salary) as 'totalSalary',Gender from employee_payroll group by Gender;
+select avg(salary) as 'averageSalary',Gender from employee_payroll group by Gender;
+select min(salary) as 'minimumSalary',Gender from employee_payroll group by Gender;
+select max(salary) as 'maximumSalary',Gender from employee_payroll group by Gender;
+select count(Gender) as 'male' from employee_payroll where Gender='M';
+select count(Gender) as 'female' from employee_payroll where Gender='F'; 
+
+select * from employee_payroll;
