@@ -24,5 +24,17 @@ select id,Name from employee_payroll where Name= 'Sajid';
 ---UC5 Ability to retrieve salary data for a particular employee-----
 select salary from employee_payroll where Name= 'Sajid';
 select * from employee_payroll;
-select salary,Name from employee_payroll where startdate between CAST('2021-02-02' as Date) and getdate();
+
+---UC6 Ability to Add Gender To Employee----
+ALTER TABLE employee_payroll ADD Gender char(1);
+
+update employee_payroll set Gender='M' WHERE id=3;
+update employee_payroll set Gender='M' WHERE id=1;
+update employee_payroll set Gender='F' WHERE id=2;
+update employee_payroll set Gender='M' WHERE id=1;
+update employee_payroll set Gender='F' WHERE id=4;
+
+select sum(Salary) as TotalSalary,Gender from employee_payroll group by Gender;
+select * from employee_payroll;
+select Avg(salary) as NumbOfEmployees,Gender from employee_payroll group by Gender;
 
