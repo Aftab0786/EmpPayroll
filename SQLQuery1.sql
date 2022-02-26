@@ -56,3 +56,12 @@ alter table employee_payroll add
 phone varchar(200),
 department varchar(100) not null default 'CSE',
 address varchar(250) not null default 'Banglore';
+
+---UC9 Ability to extend employee payroll table----
+
+
+alter table employee_payroll add
+basicPay float,
+deduction float,
+taxablePay float,
+incomeTax float;
