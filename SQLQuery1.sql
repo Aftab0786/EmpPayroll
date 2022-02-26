@@ -49,3 +49,10 @@ select count(Gender) as 'male' from employee_payroll where Gender='M';
 select count(Gender) as 'female' from employee_payroll where Gender='F'; 
 
 select * from employee_payroll;
+
+---UC8 Ability to store employee information like employee phone, address-----
+
+alter table employee_payroll add 
+phone varchar(200),
+department varchar(100) not null default 'CSE',
+address varchar(250) not null default 'Banglore';
